@@ -28,6 +28,7 @@
 		}
 		.active{
 			text-decoration: underline;
+			color: red;
 		}
 		
 	</style>
@@ -51,7 +52,7 @@
 
 			a.addEventListener("click", function(evt){
 					evt.preventDefault();
-					let act = evt.target.closest('li');
+					let act = evt.target.closest('a');
 					act.classList.toggle ("active");		
 			});
 			

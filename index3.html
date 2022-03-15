@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>document</title>
+	<script src="https://kit.fontawesome.com/d2478407d0.js" crossorigin="anonymous"></script>
+
+	<style>
+		.menu_wrap{
+			margin-top: 100px;
+			width: 100%;
+			font-size: 30px;
+			font-family: Verdana;
+		}
+		ul{
+			display: flex;
+			padding: 0;
+			justify-content: center;
+		}
+		li{
+			list-style: none;
+			padding: 10px;
+		}
+		a{
+			text-decoration: none;
+			color: #D4A4DA;
+		}
+		.active{
+			text-decoration: underline;
+		}
+		
+	</style>
+
+
+</head>
+<body>
+	<div class="menu_wrap">
+		<ul>
+			<li><a href="#"><i class="fa-solid fa-pager"></i>главная</a></li>
+			<li><a href="#"><i class="fa-solid fa-user-astronaut"></i>каталог</a></li>
+			<li><a href="#"><i class="fa-solid fa-microphone"></i>доставка</a></li>
+		</ul>
+	</div>
+	
+
+
+	<script>
+		let a = document.querySelector(".menu_wrap");
+
+
+			a.addEventListener("click", function(evt){
+					evt.preventDefault();
+					let act = evt.target.closest('li');
+					act.classList.toggle ("active");		
+			});
+			
+		
+
+		
+
+		
+
+	</script>
+</body>
+</html>

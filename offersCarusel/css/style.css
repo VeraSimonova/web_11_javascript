@@ -1,0 +1,116 @@
+* {
+			border: 0;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		:root {
+			--hue: 223;
+			--bg: hsl(var(--hue),10%,90%);
+			--fg: hsl(var(--hue),10%,10%);
+			font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+		}
+		body {
+			background-color: var(--bg);
+			color: var(--fg);
+			font: 1em/1.5 sans-serif;
+			height: 100vh;
+			display: grid;
+			place-items: center;
+			transition: background-color 0.3s;
+		}
+		.main_wrap{
+			width: 100%;
+		}
+		.offers_wrap{
+			float: left;
+			margin-left: 200px
+		}
+		.list_offers{
+			width: 750px;
+			transition: 1s ease;
+		}
+		.item_offer{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			border: 1px solid #fff;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+		.item_offer:first-child{
+			margin-top: 5px;
+		}
+		.item_offer:last-child{
+			margin-top: 5px;
+		}
+		.item_offer img{
+			width: 100px;
+			height: 100px;
+			display: block;
+		}
+		.offer_info{
+			padding-left: 50px;
+			width: 85%;
+		}
+		.offer_info .city{
+			font-size: 12px;
+		}
+		.offer_info .money{
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.carusel_wrap{
+			float: right;
+		}
+		.carusel{
+			overflow: hidden;
+			height: 650px;
+			position: relative;
+			
+		}
+		.navigation_carusel_buttons button{
+			padding: 5px 10px;
+			background-color: rgba(205, 214, 219, 0.3);
+			width: 50px;
+			text-align: center;
+			left: 50%;
+			margin-left: -35px;
+		}
+		.navigation_carusel_buttons button.prev{
+			position: absolute;
+			top: 0;
+
+		}
+		.navigation_carusel_buttons button.next{
+			position: absolute;
+			bottom: 0;
+		}
+		.carusel .list_offers{
+			width: 250px;
+		}
+		.carusel .item_offer {
+			width: 100%;
+			font-size: 10px;
+		}
+		.carusel .item_offer h3{
+			font-size: 12px;
+		}
+		.carusel .item_offer img{
+			width: 50px;
+			height: 50px;
+			display: block;
+		}
+		.carusel .offer_info{
+			width: 75%;
+			height: 100%;
+			padding-left: 20px;
+		}
+		.carusel .offer_info .city{
+			font-size: 11px;
+		}
+		.carusel .offer_info .money{
+			font-size: 11px;
+			font-weight: bold;
+		}
+			

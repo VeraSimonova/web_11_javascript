@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		.warning{
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="login" name="login" placeholder="Логин" class="log">
+		<input type="password" name="password" placeholder="Пароль" class="pass">
+		<button>Send</button>
+		
+	</form>
+
+	<script>
+		let userLogin = document.querySelector(".log");
+		let userPassword = document.querySelector(".pass");
+		let inputs = document.querySelectorAll("input");
+		let btn = document.querySelector("button");
+
+		let userLoginResult = null;
+		let userPasswordResult = null;
+		for(let input of inputs){
+			input.addEventListener('blur', ()=>{
+				if (userLogin.value.length > 0) {
+					userLogin.classList.remove("warning");
+					userLoginResult = userLogin.value;
+				}
+				else{
+					userLogin.placeholder = "введите логин";
+					userLogin.classList.add("warning")
+				}
+				if (userPassword.value.length > 0) {
+					userPassword.classList.remove("warning");
+					userPasswordResult = userPassword.value;	
+				}
+				else{
+					userPassword.placeholder = "введите пароль";
+					userPassword.classList.add("warning");
+				}
+				let user = {
+					log: userLoginResult,
+					pass: userPasswordResult
+				}
+				return localStorage.setItem('user', JSON.stringify(user));
+			})
+		}
+		
+		btn.addEventListener('click', (evt)=>{
+			evt.preventDefault();
+			window.location.assign('./index2.html')	
+				
+		})
+			
+			
+		
+		
+	</script>
+</body>
+</html>
